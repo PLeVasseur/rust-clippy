@@ -1,20 +1,28 @@
 error: avoid specialized matchers in declarative macros alongside generic ones
-  --> tests/ui/avoid_specialized_and_generic_patterns_in_declarative_macro.rs:20:53
+  --> tests/ui/avoid_specialized_and_generic_patterns_in_declarative_macro.rs:22:13
    |
-LL | macro_rules! impl_safety_trait_specialization_issue {
-   |                                                     ^
+LL |     ($t:ty) => {
+   |             ^^
    |
    = help: consider implementing specialized patterns outside of macro
    = note: `-D clippy::avoid-specialized-and-generic-patterns-in-declarative-macro` implied by `-D warnings`
    = help: to override `-D warnings` add `#[allow(clippy::avoid_specialized_and_generic_patterns_in_declarative_macro)]`
 
 error: avoid specialized matchers in declarative macros alongside generic ones
-  --> tests/ui/avoid_specialized_and_generic_patterns_in_declarative_macro.rs:52:61
+  --> tests/ui/avoid_specialized_and_generic_patterns_in_declarative_macro.rs:30:22
    |
-LL | macro_rules! impl_safety_trait_without_specialization_issue {
-   |                                                             ^
+LL |     (EmergencyValve) => {
+   |                      ^^
    |
    = help: consider implementing specialized patterns outside of macro
 
-error: aborting due to 2 previous errors
+error: avoid specialized matchers in declarative macros alongside generic ones
+  --> tests/ui/avoid_specialized_and_generic_patterns_in_declarative_macro.rs:54:13
+   |
+LL |     ($t:ty) => {
+   |             ^^
+   |
+   = help: consider implementing specialized patterns outside of macro
+
+error: aborting due to 3 previous errors
 
