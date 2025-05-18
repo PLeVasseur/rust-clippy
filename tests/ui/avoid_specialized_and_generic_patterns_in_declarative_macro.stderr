@@ -1,28 +1,47 @@
-error: avoid specialized matchers in declarative macros alongside generic ones
-  --> tests/ui/avoid_specialized_and_generic_patterns_in_declarative_macro.rs:22:13
+Found 
+error: avoid specialized matchers in declarative macros alongside generic ones: path []; tokens: TokenStream([Token(Token { kind: Dollar, span: tests/ui/avoid_specialized_and_generic_patterns_in_declarative_macro.rs:22:6: 22:7 (#0) }, JointHidden), Token(Token { kind: Ident("u", No), span: tests/ui/avoid_specialized_and_generic_patterns_in_declarative_macro.rs:22:7: 22:8 (#0) }, Joint), Token(Token { kind: Colon, span: tests/ui/avoid_specialized_and_generic_patterns_in_declarative_macro.rs:22:8: 22:9 (#0) }, JointHidden), Token(Token { kind: Ident("ty", No), span: tests/ui/avoid_specialized_and_generic_patterns_in_declarative_macro.rs:22:9: 22:11 (#0) }, JointHidden)])
+  --> tests/ui/avoid_specialized_and_generic_patterns_in_declarative_macro.rs:22:6
    |
-LL |     ($t:ty) => {
-   |             ^^
+LL |     ($u:ty) => {
+   |      ^
    |
    = help: consider implementing specialized patterns outside of macro
    = note: `-D clippy::avoid-specialized-and-generic-patterns-in-declarative-macro` implied by `-D warnings`
    = help: to override `-D warnings` add `#[allow(clippy::avoid_specialized_and_generic_patterns_in_declarative_macro)]`
 
-error: avoid specialized matchers in declarative macros alongside generic ones
-  --> tests/ui/avoid_specialized_and_generic_patterns_in_declarative_macro.rs:30:22
+Found 
+error: avoid specialized matchers in declarative macros alongside generic ones: path []; tokens: TokenStream([Token(Token { kind: Dollar, span: tests/ui/avoid_specialized_and_generic_patterns_in_declarative_macro.rs:30:6: 30:7 (#0) }, JointHidden), Token(Token { kind: Ident("t", No), span: tests/ui/avoid_specialized_and_generic_patterns_in_declarative_macro.rs:30:7: 30:8 (#0) }, Joint), Token(Token { kind: Colon, span: tests/ui/avoid_specialized_and_generic_patterns_in_declarative_macro.rs:30:8: 30:9 (#0) }, JointHidden), Token(Token { kind: Ident("ty", No), span: tests/ui/avoid_specialized_and_generic_patterns_in_declarative_macro.rs:30:9: 30:11 (#0) }, Joint)])
+  --> tests/ui/avoid_specialized_and_generic_patterns_in_declarative_macro.rs:30:6
+   |
+LL |     ($t:ty, EmergencyValve) => {
+   |      ^
+   |
+   = help: consider implementing specialized patterns outside of macro
+
+error: avoid specialized matchers in declarative macros alongside generic ones: path []; tokens: TokenStream([Token(Token { kind: Ident("EmergencyValve", No), span: tests/ui/avoid_specialized_and_generic_patterns_in_declarative_macro.rs:30:13: 30:27 (#0) }, JointHidden)])
+  --> tests/ui/avoid_specialized_and_generic_patterns_in_declarative_macro.rs:30:13
+   |
+LL |     ($t:ty, EmergencyValve) => {
+   |             ^^^^^^^^^^^^^^
+   |
+   = help: consider implementing specialized patterns outside of macro
+
+error: avoid specialized matchers in declarative macros alongside generic ones: path []; tokens: TokenStream([Token(Token { kind: Ident("EmergencyValve", No), span: tests/ui/avoid_specialized_and_generic_patterns_in_declarative_macro.rs:38:6: 38:20 (#0) }, JointHidden)])
+  --> tests/ui/avoid_specialized_and_generic_patterns_in_declarative_macro.rs:38:6
    |
 LL |     (EmergencyValve) => {
-   |                      ^^
+   |      ^^^^^^^^^^^^^^
    |
    = help: consider implementing specialized patterns outside of macro
 
-error: avoid specialized matchers in declarative macros alongside generic ones
-  --> tests/ui/avoid_specialized_and_generic_patterns_in_declarative_macro.rs:54:13
+Found 
+error: avoid specialized matchers in declarative macros alongside generic ones: path []; tokens: TokenStream([Token(Token { kind: Dollar, span: tests/ui/avoid_specialized_and_generic_patterns_in_declarative_macro.rs:62:6: 62:7 (#0) }, JointHidden), Token(Token { kind: Ident("t", No), span: tests/ui/avoid_specialized_and_generic_patterns_in_declarative_macro.rs:62:7: 62:8 (#0) }, Joint), Token(Token { kind: Colon, span: tests/ui/avoid_specialized_and_generic_patterns_in_declarative_macro.rs:62:8: 62:9 (#0) }, JointHidden), Token(Token { kind: Ident("ty", No), span: tests/ui/avoid_specialized_and_generic_patterns_in_declarative_macro.rs:62:9: 62:11 (#0) }, JointHidden)])
+  --> tests/ui/avoid_specialized_and_generic_patterns_in_declarative_macro.rs:62:6
    |
 LL |     ($t:ty) => {
-   |             ^^
+   |      ^
    |
    = help: consider implementing specialized patterns outside of macro
 
-error: aborting due to 3 previous errors
+error: aborting due to 5 previous errors
 

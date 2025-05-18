@@ -19,7 +19,15 @@ trait SafetyCheckForSpecializationIssue {
 // This macro has a pattern ordering issue possible on refactor
 macro_rules! impl_safety_trait_specialization_issue {
     // Generic pattern matches any type - including EmergencyValve
-    ($t:ty) => {
+    ($u:ty) => {
+        impl SafetyCheckForSpecializationIssue for $u {
+            fn verify(&self) -> SafetyLevel {
+                SafetyLevel::Green
+            }
+        }
+    };
+    // Generic pattern matches any type - including EmergencyValve
+    ($t:ty, EmergencyValve) => {
         impl SafetyCheckForSpecializationIssue for $t {
             fn verify(&self) -> SafetyLevel {
                 SafetyLevel::Green
