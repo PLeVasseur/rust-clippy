@@ -82,6 +82,7 @@ mod assertions_on_result_states;
 mod assigning_clones;
 mod async_yields_async;
 mod attrs;
+mod avoid_specialized_and_generic_patterns_in_declarative_macro;
 mod await_holding_invalid;
 mod blocks_in_conditions;
 mod bool_assert_comparison;
@@ -944,5 +945,6 @@ pub fn register_lints(store: &mut rustc_lint::LintStore, conf: &'static Conf) {
     store.register_late_pass(|_| Box::new(single_option_map::SingleOptionMap));
     store.register_late_pass(move |_| Box::new(redundant_test_prefix::RedundantTestPrefix));
     store.register_late_pass(|_| Box::new(cloned_ref_to_slice_refs::ClonedRefToSliceRefs::new(conf)));
+    store.register_early_pass(|| Box::new(avoid_specialized_and_generic_patterns_in_declarative_macro::AvoidSpecializedAndGenericPatternsInDeclarativeMacro));
     // add lints here, do not remove this comment, it's used in `new_lint`
 }

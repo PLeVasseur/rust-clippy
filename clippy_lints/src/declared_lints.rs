@@ -30,6 +30,7 @@ pub static LINTS: &[&crate::LintInfo] = &[
     crate::attrs::SHOULD_PANIC_WITHOUT_EXPECT_INFO,
     crate::attrs::UNNECESSARY_CLIPPY_CFG_INFO,
     crate::attrs::USELESS_ATTRIBUTE_INFO,
+    crate::avoid_specialized_and_generic_patterns_in_declarative_macro::AVOID_SPECIALIZED_AND_GENERIC_PATTERNS_IN_DECLARATIVE_MACRO_INFO,
     crate::await_holding_invalid::AWAIT_HOLDING_INVALID_TYPE_INFO,
     crate::await_holding_invalid::AWAIT_HOLDING_LOCK_INFO,
     crate::await_holding_invalid::AWAIT_HOLDING_REFCELL_REF_INFO,

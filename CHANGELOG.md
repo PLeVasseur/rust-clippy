@@ -5627,6 +5627,7 @@ Released 2018-09-13
 [`assign_ops`]: https://rust-lang.github.io/rust-clippy/master/index.html#assign_ops
 [`assigning_clones`]: https://rust-lang.github.io/rust-clippy/master/index.html#assigning_clones
 [`async_yields_async`]: https://rust-lang.github.io/rust-clippy/master/index.html#async_yields_async
+[`avoid_specialized_and_generic_patterns_in_declarative_macro`]: https://rust-lang.github.io/rust-clippy/master/index.html#avoid_specialized_and_generic_patterns_in_declarative_macro
 [`await_holding_invalid_type`]: https://rust-lang.github.io/rust-clippy/master/index.html#await_holding_invalid_type
 [`await_holding_lock`]: https://rust-lang.github.io/rust-clippy/master/index.html#await_holding_lock
 [`await_holding_refcell_ref`]: https://rust-lang.github.io/rust-clippy/master/index.html#await_holding_refcell_ref
